@@ -1,0 +1,52 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    
+    margin: auto;
+}
+
+.gallery-controller {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+    font-size: 1.5rem;
+    font-family: ubuntu;
+    height: 20vh;
+    width: 100%;
+}
+
+.img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+
+
+.img-gallery>* {
+    margin-bottom: 1rem;
+    border-radius: 0.625rem; 
+    transition: .3s;
+    
+}
+
+.img-gallery>*:hover {
+    cursor: pointer;
+    height: 380px;
+    width: 380px;
+    transition: all .3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    
+}
+
+.img-gallery img {
+    border-radius: 0.625rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}

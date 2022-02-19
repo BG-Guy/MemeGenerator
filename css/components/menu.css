@@ -1,0 +1,44 @@
+.menu {
+    display: none;
+    height: 3rem;
+    width: 3rem;
+    right: 5%;
+    top: 50%;
+    z-index: 2;
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    position: absolute;
+    background-color: var(--main-clr);
+    text-decoration: none;
+    display: flex;
+    
+    flex-direction: column;
+    font-family: inconsolata;
+    font-size: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ;
+    pointer-events: none;
+
+    
+}
+
+.nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    transition: all 1s ;
+    pointer-events: all;
+}
+
+

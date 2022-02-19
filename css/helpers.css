@@ -1,0 +1,21 @@
+.clean-list {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    font-family: inconsolata;
+    font-size: 1.5rem;
+}
+
+li:hover {
+    box-shadow: inset 0px -5px 0px -1px #58C93A;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+    
+}
+

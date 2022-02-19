@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    bottom: 0px;  
+    height: 20vh;
+    width: 100vw;
+    background-color: var(--main-clr);
+    border: 1px solid black;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Meme Generator</title>
+</head>
+<body onload="init()">
+    <ul class="nav-links">
+        <li onclick="showGallery()" >Gallery</li>
+        <li onclick="ShowMemesGallery()">Memes</li>
+        <li>About</li>
+    </ul>
+    <header class="header">
+        
+        <div class="logo">Meme Generator</div>
+        <div class="menu">☰</div>
+            <ul class="main-nav clean-list">
+                <li onclick="showGallery()" >Gallery</li>
+                <li onclick="ShowMemesGallery()">Memes</li>
+                <li>About</li>
+            </ul>
+    </header>
+    <div class="gallery">
+        <div class="features">
+            <div class="search-bar">
+                <img onclick="expandSearchBar()" src="/ICONS/search-icon.png" alt="">
+                <input type="text" class="search-bar-input" placeholder="Search by tags">
+            </div>
+            <span onclick="onFlexible()" class="im-flexible-btn">I'm Flexible</span>
+
+        </div>
+        <div class="gallery-controller">
+            <span id="funny">Funny</span>
+            <span id="women">Women</span>
+            <span id="men">Men</span>
+            <span id="animal">Animals</span>
+            <span id="politics">Politics</span>
+        </div>
+        <div class="img-gallery">
+            
+        </div>
+
+    </div>
+    <div class="meme-gallery hide">
+            
+    </div>
+    <div class="meme-generator hide">
+        <div class="canvas">
+            <canvas width="444" height="444" id="meme-canvas">
+    
+            </canvas>
+
+        </div>
+        <div class="meme-controller">
+            <div class="line-controller">
+                <input onclick="onEditLine()" type="text" id="text-line" placeholder="Enter Text">
+                <img onclick="onAddLine(this)" class="icon addBtn" src="./ICONS/add.png" alt="">
+                <img class="icon" onclick="onSwitchLines()" src="./ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
+                <img class="icon" src="./ICONS/trash.png" alt="">
+            </div>
+            <div class="line-editor">
+                <img class="icon" onclick="onStepFont(1.125)" src="/ICONS/increase font - icon.png" alt="">
+                <img class="icon" onclick="onStepFont(-1.125)" src="/ICONS/decrease font - icon.png" alt="">
+                <img class="icon" onclick="onAlignText('left')" src="/ICONS/align-to-left.png" alt="">
+                <img class="icon" onclick="onAlignText('center')" src="/ICONS/center-text-alignment.png" alt="">
+                <img class="icon" onclick="onAlignText('right')" src="/ICONS/align-to-right.png" alt="">
+                <select onchange="onSetFont(this.value)" value='' id="set-font" name="">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Ubunuto">Ubunuto</option>
+                </select>
+                <label for="create-color">
+                    <input onchange="onSetColor(this.value)" type="color" id="create-color" style="visibility: hidden; height: 0px; width: 0px;">
+                    <img class="icon" src="/ICONS/paint-board-and-brush.png" alt="">
+                </label>
+            </div>
+            <!-- <div class="stickers">
+                <i>s</i>
+                <i>s</i>
+                <i>s</i>
+            </div> -->
+            <div class="save-and-share">
+                <img class="icon"  src="/ICONS/facebook-logo.png" alt="">
+                <button onclick="onSaveMeme()" class="icon" >&#128190;</button>
+
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer align-center">
+        <span class="coprights">Made By Guy Buganim</span>
+    </footer>
+</body>
+<script src="./utils.js"></script>
+<script src="./service/local-storage-service.js"></script>
+<script src="./controller/gallery-controller.js"></script>
+<script src="./controller/meme-gallery-controller.js"></script>
+<script src="./controller/meme-controller.js"></script>
+<script src="/service/gallery-service.js"></script>
+<script src="./service/meme-gallery-service.js"></script>
+<script src="./service/meme-service.js"></script>
+</html>

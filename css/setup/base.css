@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 0.845rem;
+    background-color: #F8F9F9;
+}
+
+a {
+    text-decoration: none;
+}
